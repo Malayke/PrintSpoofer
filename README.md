@@ -107,3 +107,5 @@ C:\TOOLS>PrintSpoofer.exe -d 3 -c "powershell -ep bypass"
 <p align="center">
   <img src="run_on_webshell.png">
 </p>
+
+[cmd.aspx](https://gist.github.com/Malayke/2ec681313cdb0892ebc3c9f7fc0baafc)
